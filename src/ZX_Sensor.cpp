@@ -275,7 +275,7 @@ bool ZX_Sensor::gestureAvailable()
     if ( !wireReadDataByte(ZX_STATUS, status) ) {
         return false;
     }
-    status &= 0b00011100;
+    status &= 0b00000100;
     if ( status ) {
         return true;
     }
